@@ -130,5 +130,100 @@ h3 {
 
 
 
+/* Starts the responsive */
 
+
+@media only screen and (max-width: 768px)
+{
+    .btn-start-game{
+        top: 20rem;
+        font-size: 1.4rem;
+    }
+
+    .name-player-input {
+        font-size: 2.4rem;        
+    }
+    
+}
+
+@media only screen and (max-width: 540px){
+    h1 span {
+        display: block;
+    }
+    
+    h3 {
+        position: relative;
+        top: 1rem;
+        font-size: 1.8rem;
+    }
+
+    .name-player-input {
+        font-size: 2.5rem;
+        width: 60%;
+        
+    }
+
+    .btn-start-game{
+        top: 22rem;
+        font-size: 1.4rem;
+    }
+
+    #choose-player {
+        transform: translateY(-60%);
+    }
+
+    .avatar {
+        margin: 0 10% 0 10%;
+    }
+
+    .img-avatar-card {
+        width: 45%;
+    }
+
+    .name-player-input {
+        font-size: 2.2rem;
+        width: 85%;        
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    h1 {
+        font-size: 3rem;
+    }
+    
+    h3 {
+        position: relative;
+        top: 2rem;
+        font-size: 1.4rem;
+    }
+    
+    .btn-start-game{
+        top: 21rem;
+        font-size: 1rem;
+    }
+
+    .img-avatar-card {
+        width: 48%;
+    }
+}
+
+@media only screen and (max-width: 280px) {
+    header {
+        top: 2rem;
+        width: 100%;
+    }
+
+    #choose-player {
+        top: 55% ;
+    }
+
+    .btn-start-game{
+        font-size: 1.4rem;
+    }
+
+  .name-player-input {
+        font-size: 1.6rem;
+        width: 90%;        
+    }
+}
 
