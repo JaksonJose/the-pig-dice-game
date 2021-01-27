@@ -15,12 +15,10 @@ const PlayerSideB = () => {
 
 const SideSelector = () => {
     if (playerSide === 0){
-        playerAvatar[0] = 1;
-        playerAvatar[1] = 2;
+        playerAvatar = [1, 2];
         Player();
     } else {
-        playerAvatar[0] = 3;
-        playerAvatar[1] = 4;
+        playerAvatar = [3, 4];
         Player();
     }
 }
@@ -30,23 +28,24 @@ document.querySelector('.img-avatar-02').addEventListener('mouseover', () => Pla
 
 /* Switch the palyer avatar */
 const Player = () => {
-        const guySelector = document.querySelector(`.switch-0${playerAvatar[0]}`);
-        const girlSelector = document.querySelector(`.switch-0${playerAvatar[1]}`);
+        let [a, b] = playerAvatar;
+        const guySelector = document.querySelector(`.switch-0${a}`);
+        const girlSelector = document.querySelector(`.switch-0${b}`);
     // Select the boy
     guySelector.addEventListener('click', () => {
-        guySelector.classList.add(`avatar-guy-position-active--0${playerAvatar[0]}`);
-        guySelector.classList.remove(`avatar-guy-position-non-active--0${playerAvatar[0]}`);
+        guySelector.classList.add(`avatar-guy-position-active--0${a}`);
+        guySelector.classList.remove(`avatar-guy-position-non-active--0${a}`);
 
-        girlSelector.classList.add(`avatar-girl-position-non-active--0${playerAvatar[1]}`);
-        girlSelector.classList.remove(`avatar-girl-position-active--0${playerAvatar[1]}`);
+        girlSelector.classList.add(`avatar-girl-position-non-active--0${b}`);
+        girlSelector.classList.remove(`avatar-girl-position-active--0${b}`);
     });
     // Select the girl
     girlSelector.addEventListener('click', () => {
-        guySelector.classList.remove(`avatar-guy-position-active--0${playerAvatar[0]}`);
-        guySelector.classList.add(`avatar-guy-position-non-active--0${playerAvatar[0]}`);
+        guySelector.classList.remove(`avatar-guy-position-active--0${a}`);
+        guySelector.classList.add(`avatar-guy-position-non-active--0${a}`);
 
-        girlSelector.classList.remove(`avatar-girl-position-non-active--0${playerAvatar[1]}`);
-        girlSelector.classList.add(`avatar-girl-position-active--0${playerAvatar[1]}`);
+        girlSelector.classList.remove(`avatar-girl-position-non-active--0${b}`);
+        girlSelector.classList.add(`avatar-girl-position-active--0${b}`);
     });
 }
 
