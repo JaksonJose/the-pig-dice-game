@@ -1,1 +1,1 @@
-# the-pig-dice-game
+# The Pig Dice Game
