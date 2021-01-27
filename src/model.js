@@ -1,4 +1,6 @@
 'use strict';
+const namePlayerA = document.querySelector('#playerA');
+const namePlayerB = document.querySelector('#playerB');
 
 let playerSide = 0;
 let playerAvatar = [];
@@ -49,12 +51,11 @@ const Player = () => {
     });
 }
 
-
+document.querySelector('#playerA').addEventListener('click', () => namePlayerA.select());
+document.querySelector('#playerB').addEventListener('click', () => namePlayerB.select());
 
 /* Start the game */
 document.querySelector('.btn-start-game').addEventListener('click', () => {
-    const namePlayerA = document.querySelector('#playerA');
-    const namePlayerB = document.querySelector('#playerB');
     document.querySelector('.modal').classList.add('modal-hidden');
     document.querySelector('#name--0').textContent = namePlayerA.value;
     document.querySelector('#name--1').textContent = namePlayerB.value;
