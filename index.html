@@ -6,42 +6,52 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="style/style.css" />
     <link rel="stylesheet" href="style/modal-style.css">
-    <link rel="stylesheet" href="style/.css">
+    <link rel="stylesheet" href="style/modal-result.css">
     <title>Pig Game</title>
   </head>
   <body>
     <main>
       <section class="modal">
        <header>
-         <h1>Welcome to Pig Dice Game!</h1>
+         <h1><span>Welcome to</span> Pig Dice Game!</h1>
          <h3>Choose your Avatar and write your Name</h3>
         </header>
-        
+
         <button class="btn btn-start-game">Start the Game</button>
 
        <div id="choose-player">
          <div class="avatar">
            <p class="img-avatar img-avatar-01">
-             <img src="image/avatar-guy.png" alt="" class="img-avatar-card switch-01 avatar-guy-position-active--01 ">
-             <img src="image/avatar-girl.png" alt="" class="img-avatar-card switch-02 avatar-girl-position-non-active--02 ">
+             <img src="#" alt="Avatar for choose gender" id="switch-01" class="img-avatar-card avatar-guy-position-active--01">
+             <img src="#" alt="Avatar for choose gender" id="switch-02" class="img-avatar-card avatar-girl-position-non-active--02">
            </p>
            <p class="img-avatar img-avatar-02">
-             <img src="image/avatar-guy.png" alt="" class="img-avatar-card switch-03 avatar-guy-position-active--03">
-             <img src="image/avatar-girl.png" alt="" class="img-avatar-card switch-04 avatar-girl-position-non-active--04">
+             <img src="#" alt="Avatar for choose gender" id="switch-03" class="img-avatar-card avatar-guy-position-active--03">
+             <img src="#" alt="Avatar for choose gender" id="switch-04" class="img-avatar-card  avatar-girl-position-non-active--04">
            </p>
          </div> 
 
          <div id="name-player">
             <p id="name-playerA">
-              <input type="text" name="playerA" value="Player A" class="name-player-input" id="playerA">
+              <input type="text" name="playerA" value="Player A" minlength="3" maxlength="12" class="name-player-input" id="playerA">
             </p>
             <p id="name-playerB">
-              <input type="text" name="playerB" value="Player B" class="name-player-input" id="playerB">
+              <input type="text" name="playerB" value="Player B" minlength="3" maxlength="12"  class="name-player-input" id="playerB">
             </p>
          </div>
        </div>
       </section>
 
+      <section class="modal-alert modal-alert-hidden">
+        <div class="modal-content">
+          <h2 class="modal-title"></h2>
+          <img src="#" alt="" class="modal-img">
+          <div class="modal-text"></div>
+          <button class="btn btn-next">Play</button>
+        </div>
+        
+      </section>
+      
       <section class="player player--0 player--active">
         <h2 class="name" id="name--0">Player 1</h2>
         <p class="score" id="score--0">43</p>
@@ -64,6 +74,8 @@
       <button class="btn btn--new">🔄 New game</button>
       <button class="btn btn--roll">🎲 Roll dice</button>
       <button class="btn btn--hold">📥 Hold</button>
+
+      
     </main>
 
     <script src="src/script.js"></script>

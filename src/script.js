@@ -37,6 +37,8 @@ const initilization = () => {
 
 initilization();
 
+
+
 const switchPlayer = () => {
     document.querySelector(`#current--${activePlayer}`).textContent = 0;
     currentScore = 0;
@@ -60,8 +62,9 @@ btnRoll.addEventListener('click', () => {
             // Add dice to current score
             currentScore += playDice;
             document.querySelector(`#current--${activePlayer}`).textContent = currentScore;
-        } else {  
-            switchPlayer();   
+        } else {
+            switchPlayer();
+            modalAlert();
         }
     }
 });
@@ -71,7 +74,6 @@ btnHold.addEventListener('click', () => {
    if (playing) {
         scores[activePlayer] += currentScore;
         document.querySelector(`#score--${activePlayer}`).textContent = scores[activePlayer];
-        console.log(activePlayer);
         
     
         // 2 - check if players's score is >= 100
@@ -84,8 +86,16 @@ btnHold.addEventListener('click', () => {
         } else {
             //switch players
             switchPlayer();
+            modalAlert();
         }
    }
 })
 
 btnNew.addEventListener('click', () => initilization());
+
+/* Modal turn the player constructors */
+
+
+const modalAlert = () => {
+    document.querySelector('.modal-alert').classList.remove('modal-alert-hidden');
+}
