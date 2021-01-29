@@ -46,17 +46,18 @@
 
 .modal-img {
     position: absolute;
-    width: 25%;
+    width: 20%;
     height: 35%;
     top: 20%;
     right: 0%;
 }
 
 
-.modal-content .modal-text {
+.modal-text {
     position: relative;
+    font-weight: 800;
     width: 100%;
-    right: 5%;
+    left:10%;
     top: 10%;
 }
 
@@ -64,4 +65,47 @@
     bottom: 20%;
     left: 80%;
     box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.6);
+}
+
+
+@media only screen and (max-width: 680px) {
+    .modal-content h2, p{
+        font-size: 3.4rem;
+        left: 0;
+    }
+
+    .modal-text {
+        font-size: 1.8rem;
+        left: 0;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .modal-content h2, p {
+        text-align: center;
+        font-size: 2.4rem;
+    }
+
+    .modal-text {
+        text-align: center;
+        font-size: 1.2rem;
+        top: 25%;
+    }
+
+    .modal-img {
+        height: 20%;
+        top: 25%;
+        right: 35%;
+    }
+
+    .btn-next {
+        bottom: 20%;
+        left: 50%;
+    }
+}
+
+@media only screen and (max-width: 280px) {
+    .modal-content h1, p {
+        font-size: 2rem;
+    }
 }

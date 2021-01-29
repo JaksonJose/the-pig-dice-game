@@ -2,6 +2,8 @@
 const namePlayerA = document.querySelector('#playerA');
 const namePlayerB = document.querySelector('#playerB');
 const avatar = document.querySelector('#switch-01');
+const sideSelectA = document.querySelector('.img-avatar-01');
+const sideSelectB = document.querySelector('.img-avatar-02');
 
 /* When user pass the mouse arrow over the player */
 let playerSide = 0;
@@ -27,9 +29,6 @@ const SideSelector = () => {
     }
 }
 
-document.querySelector('.img-avatar-01').addEventListener('mouseover', () => PlayerSideA());
-document.querySelector('.img-avatar-02').addEventListener('mouseover', () => PlayerSideB());
-
 
 /* Switch the palyer avatar */
 const Player = () => {
@@ -54,6 +53,8 @@ const Player = () => {
     });
 }
 
+sideSelectA.addEventListener('mouseover', () => PlayerSideA());
+sideSelectB.addEventListener('mouseover', () => PlayerSideB());
 namePlayerA.addEventListener('click', () => namePlayerA.select());
 namePlayerB.addEventListener('click', () => namePlayerB.select());
 
@@ -62,6 +63,9 @@ document.querySelector('.btn-start-game').addEventListener('click', () => {
     document.querySelector('.modal').classList.add('modal-hidden');
     document.querySelector('#name--0').textContent = namePlayerA.value;
     document.querySelector('#name--1').textContent = namePlayerB.value;
+
+    localStorage.setItem('player-0', namePlayerA.value);
+    localStorage.setItem('player-1', namePlayerB.value);
 })
 
 
@@ -74,14 +78,3 @@ document.querySelector('#switch-01').src = 'image/avatar-guy.png';
 document.querySelector('#switch-02').src = 'image/avatar-girl.png';
 document.querySelector('#switch-03').src = 'image/avatar-guy.png';
 document.querySelector('#switch-04').src = 'image/avatar-girl.png';
-
-/* ****** Modal Alert Constructors **** */
-document.querySelector('.modal-title').innerHTML = `Dude! <p> You got a pipe.</p>`;
-document.querySelector('.modal-img').src = 'image/dice-one-side.png';
-document.querySelector('.modal-text').innerHTML = `<p>Now is your buddy turn. Good Luck!</p>`;
-
-/*** Modal Play Button ***** */
-
-document.querySelector('.btn-next').addEventListener('click', () => {
-    document.querySelector('.modal-alert').classList.add('modal-alert-hidden');
-})
