@@ -176,7 +176,7 @@ h3 {
     }
 
     .img-avatar-card {
-        width: 45%;
+        width: 40%;
     }
 
     .name-player-input {
@@ -199,10 +199,6 @@ h3 {
     .btn-start-game{
         top: 21rem;
         font-size: 1rem;
-    }
-
-    .img-avatar-card {
-        width: 48%;
     }
 }
 
